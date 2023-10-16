@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albums</title>
+</head>
+<body>
+    <h2>Abums for {{artistName}}</h2>
+
+    <ul>
+        {{#each albums}}
+        <li>
+            <h3>{{name}}</h3>
+            <a href="/album-tracks/{{id}}">View Tracks</a>
+            {{#if images.length}}
+            <img src="{{images.[0].url}}" alt="{{name}} Album Cover" width="200" height="200">
+            {{else}}
+            <p>Sorry, no album cover available</p>
+            {{/if}}
+            <a href="/album-tracks?albumId={{id}}">View Tracks</a>
+
+        </li>
+        {{each}}
+
+    </ul>
+    
+</body>
+</html>
