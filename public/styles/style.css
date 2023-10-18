@@ -1,0 +1,65 @@
+h2 {
+    text-align: center; 
+    margin-top: 20%;
+    align-items: center;   
+    font-family: 'Arial', sans-serif;
+    font-size: 300%;
+    color: rgb(12, 78, 78);
+    text-shadow: #0078d0;
+    
+}
+
+
+form {
+    text-align: center;
+    box-sizing:border-box;
+    padding: 10px;
+}
+
+form input{
+    padding: 10px;
+    width: 20%;
+    border-radius: 10px;
+}
+
+footer {
+    padding: 10px 20px;
+    color:aliceblue;
+    font-family: 'Arial', sans-serif;
+    align-items: center;
+    margin-left: 38%;
+    font-weight: bold;
+}
+
+
+
+
+
+#search {
+  background-color: #0078d0;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+  margin-left: 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+
+#search:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+

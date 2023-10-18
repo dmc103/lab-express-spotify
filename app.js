@@ -98,7 +98,6 @@ app.get('/albumTracks/:albumId' , (req, res, next) => {
     })
     .catch(err => {
         console.log('Error while searching artists occured:', err);
-        res.status(500).send('An error occured while searching for artists');
     });
 
 });
