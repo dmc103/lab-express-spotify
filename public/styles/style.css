@@ -1,4 +1,4 @@
-h2 {
+#welcome, #searchresult, #albums, #tracks {
     text-align: center; 
     margin-top: 20%;
     align-items: center;   
@@ -7,6 +7,13 @@ h2 {
     color: rgb(12, 78, 78);
     text-shadow: #0078d0;
     
+}
+
+#searchresult, #albums, #tracks {
+    color: aliceblue;
+    margin-top: 2%;
+    font-size: 200%;
+    margin-bottom: 5%;
 }
 
 
@@ -35,7 +42,7 @@ footer {
 
 
 
-#search {
+#search, ul li a {
   background-color: #0078d0;
   border: 0;
   border-radius: 56px;
@@ -63,3 +70,36 @@ footer {
   transform: scale(1.05);
 }
 
+
+ul {
+    font-family: 'Arial', sans-serif;
+    font-size: 100%;
+    color:rgba(4, 10, 116, 0.937);
+    padding: 0;
+    text-align: center;
+
+}
+   
+
+ul li {
+    display: inline-block;
+    margin-right: 25px;
+    margin-bottom: 55px;
+    margin-left: 38px;
+    vertical-align: top;
+    position: relative;
+    height: 300px;
+    width: 200px;
+    background-color: rgba(245, 222, 179, 0.433);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+
+ul li a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
