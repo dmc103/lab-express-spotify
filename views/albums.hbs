@@ -11,17 +11,16 @@
     <ul>
         {{#each albums}}
         <li>
-            <h3>{{name}}</h3>
-            <a href="/albumTracks/{{id}}">View Tracks</a>
-            {{#if images.length}}
-            <img src="{{images.[0].url}}" alt="{{name}} Album Cover" width="200" height="200">
+            <h3>{{this.name}}</h3>
+            {{#if this.images.[0]}}
+            <img src="{{this.images.[0].url}}" alt="{{this.name}} Album Cover" width="200" height="200">
             {{else}}
             <p>Sorry, no album cover available</p>
             {{/if}}
-            <a href="/albumTracks?albumId={{id}}">View Tracks</a>
+            <a href="/albumTracks/{{this.id}}">View Tracks</a>
 
         </li>
-        {{each}}
+        {{/each}}
 
     </ul>
     

@@ -6,17 +6,19 @@
     <title>Tracks</title>
 </head>
 <body>
-    <h2>Tracks for: {{albumId}}</h2>
+    <h2>Here are the available Tracks, enjoy!</h2>
 
     <ul>
         {{#each tracks}}
         <li>
-            {{track_number}}.{{name}}
-            {{#if preview_url}}
+            <h3>{{this.name}}</h3>
+            {{#if this.preview_url}}
             <audio controls>
-                <source src="{{preview_url}}" type="audio/mpeg">
+                <source src="{{this.preview_url}}" type="audio/mpeg">
                 Sorry, your browser does not support the audio element.
             </audio>
+            {{else}}
+            <p>Sorry, no preview available</p>
             {{/if}}
         </li>
         {{/each}}

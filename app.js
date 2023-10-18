@@ -63,7 +63,7 @@ app.get('/artist-search', (req, res) => {
 });
 
 
-app.get('/albums/:artistId', (req, res) => {
+app.get('/albums/:artistId', (req, res, next) => {
     const artistId = req.params.artistId;
 
     spotifyApi.getArtistAlbums(artistId)
@@ -77,18 +77,20 @@ app.get('/albums/:artistId', (req, res) => {
     })
     .catch(err => {
         console.log('Error while searching artists occured:', err);
-        res.status(500).send('An error occured while searching for artists');
+        res.status(500).send('An error occured while fetching for albums');
     });
 
 });
 
 
-app.get('/albumTracks/: albumId' , (req, res) => {
+app.get('/albumTracks/:albumId' , (req, res, next) => {
+    const albumId = req.params.albumId;
+
     spotifyApi.getAlbumTracks(albumId)
     .then(data => {
         const tracks = data.body.items;
 
-        res.render('albumTracks' , {
+        res.render('tracks' , {
             title: 'Album Tracks',
             albumId,
             tracks,

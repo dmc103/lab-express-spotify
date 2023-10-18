@@ -17,7 +17,7 @@
             {{else}}
             <p>Sorry, no image available</p>
             {{/if}}
-            <a href="/artist-albums?artistId={{ this.id }}">View Albums</a>
+            <a href="/albums/{{ this.id }}?artistName={{this.name}}">View Albums</a>
         </li>
         {{/each}}
     </ul>
