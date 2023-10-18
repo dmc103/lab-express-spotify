@@ -35,9 +35,7 @@ const spotifyApi = new SpotifyWebApi({
 // Our routes go here:
 
 app.get('/', (req, res) => {
-    res.render('layout', {
-        title: "Artist Search"
-    });
+    res.render('home');
 });
 
 
@@ -46,11 +44,12 @@ app.get('/artist-search', (req, res) => {
 
     spotifyApi.searchArtists(artistName)
     .then (data => {
-        // console.log('Received the following data from API:', data.body)
+        console.log('Received the following data from API:', data.body)
         const artists = data.body.artists.items;
-        console.log('Received artists:', artists);
+        // console.log('Received artists:', artists);
+        // console.log('These are the artist names:', artistName);
 
-        res.render('artist-search-results' , {
+        res.render('searchResult' , {
             title: 'Search Results',
             artistName,
             artists,
@@ -64,7 +63,7 @@ app.get('/artist-search', (req, res) => {
 });
 
 
-app.get('/albums/:artistId', (req, res, next) => {
+app.get('/albums/:artistId', (req, res) => {
     const artistId = req.params.artistId;
 
     spotifyApi.getArtistAlbums(artistId)
@@ -84,12 +83,12 @@ app.get('/albums/:artistId', (req, res, next) => {
 });
 
 
-app.get('/album-tracks/: albumId' , (req, res, next) => {
+app.get('/albumTracks/: albumId' , (req, res) => {
     spotifyApi.getAlbumTracks(albumId)
     .then(data => {
         const tracks = data.body.items;
 
-        res.render('album-tracks' , {
+        res.render('albumTracks' , {
             title: 'Album Tracks',
             albumId,
             tracks,
@@ -104,7 +103,4 @@ app.get('/album-tracks/: albumId' , (req, res, next) => {
 
 
 
-
-
-
-app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+app.listen(3950, () => console.log('My Spotify project running on port 3950 🎧 🥁 🎸 🔊'));

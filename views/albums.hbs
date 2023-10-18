@@ -12,13 +12,13 @@
         {{#each albums}}
         <li>
             <h3>{{name}}</h3>
-            <a href="/album-tracks/{{id}}">View Tracks</a>
+            <a href="/albumTracks/{{id}}">View Tracks</a>
             {{#if images.length}}
             <img src="{{images.[0].url}}" alt="{{name}} Album Cover" width="200" height="200">
             {{else}}
             <p>Sorry, no album cover available</p>
             {{/if}}
-            <a href="/album-tracks?albumId={{id}}">View Tracks</a>
+            <a href="/albumTracks?albumId={{id}}">View Tracks</a>
 
         </li>
         {{each}}

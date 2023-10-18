@@ -6,21 +6,22 @@
     <title>Search Results</title>
 </head>
 <body>
-    <h2>Search results for {{artistName}}</h2>
+    <h2>Search results for {{ artistName }}</h2>
 
     <ul>
         {{#each artists}}
         <li>
-            <h3>{{name}}</h3>
-            {{#if images.length}}
-            <img src="{{images.[0].url}}" alt="{{name}} Image=" width="200" height="200" >
+            <h3>{{ this.name }}</h3>
+            {{#if this.images.[0]}}
+            <img src="{{ this.images.[0].url }}" alt="{{ this.name }} Image" width="200" height="200" >
             {{else}}
             <p>Sorry, no image available</p>
             {{/if}}
-            <a href="/artist-albums?artistId={{id}}">View Albums</a>
+            <a href="/artist-albums?artistId={{ this.id }}">View Albums</a>
         </li>
         {{/each}}
     </ul>
     
 </body>
 </html>
+
