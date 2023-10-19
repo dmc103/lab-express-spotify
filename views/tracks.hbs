@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tracks</title>
+    <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-    <h2 id="tracks">Here are the available Tracks, enjoy!</h2>
+    <h2 id="tracks">Here are the available tracks, enjoy!</h2>
 
-    <ul>
+    <ul id="trackslist">
         {{#each tracks}}
-        <li>
+        <li id="audioplayer">
             <h3>{{this.name}}</h3>
             {{#if this.preview_url}}
             <audio controls>
